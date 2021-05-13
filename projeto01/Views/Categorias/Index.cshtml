@@ -1,0 +1,50 @@
+﻿<!--O ASP.NET Razor é uma view engine (ferramenta para geração
+de visões), que possibilita a inserção de lógica da aplicação nas
+visões. Sua sintaxe é simplificada e tem como base o C#.-->
+
+<!--define o que a
+visão recebe e que será definido como Modelo para ela.-->
+@model IEnumerable<projeto01.Models.Categoria>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        <!--Faz uso de um HTML Helper (ActionLink()) para que seja renderizado um codigo HTML que representa um link-->
+        @Html.ActionLink("Criar Categoria", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                <!--Definicao do titulo da coluna de dados da table -uso da expressão lambda para obter um campo do model-->
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th></th>
+        </tr>
+        <!--linhas da table-->
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.CategoriaId }) |
+                    @Html.ActionLink("Detalhes", "Details", new { id = item.CategoriaId }) |
+                    @Html.ActionLink("Excluir", "Delete", new { id = item.CategoriaId })
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>
