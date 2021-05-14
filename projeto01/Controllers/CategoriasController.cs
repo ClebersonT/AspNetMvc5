@@ -35,7 +35,7 @@ namespace projeto01.Controllers
         // GET: Categorias
         public ActionResult Index()
         {
-            return View(categorias);
+            return View(categorias.OrderBy(c => c.Nome));
         }
 
         public ActionResult Create()
@@ -52,5 +52,22 @@ namespace projeto01.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult Edit(long id)
+        {
+            //retornara a visão para alteração de dados
+            return View(categorias.Where(m => m.CategoriaId == id).First());
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(Categoria categoria)
+        {
+            //apaga e insere novamente
+            categorias.Remove(categorias.Where(c => c.CategoriaId == categoria.CategoriaId).First());
+            //agora sem ter que remover
+            //categorias[categorias.IndexOf(categorias.Where(c => c.CategoriaId == categoria.CategoriaId).First())] = categoria;
+            categorias.Add(categoria);
+            return RedirectToAction("Index");
+        }
     }
 }
