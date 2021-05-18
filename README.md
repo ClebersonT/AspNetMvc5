@@ -33,6 +33,24 @@ Adicione o [ValidateAntiForgeryToken] em todas as ações que aceitam POST HTTP
     @Html.ValidationMessageFor(m => m.Text, "", new { @class = "text-danger custom-danger" })
 ~~~
 
+<hr>
+
+<h5>HttpStatusCodeResult</h5>
+Fornece uma maneira de retornar um resultado de ação com uma descrição e código de status de resposta HTTP específicos.
+
+<h5>HttpStatusCode.BadRequest</h5>
+Equivalente ao status HTTP 400. BadRequest indica que a solicitação não pôde ser entendida pelo servidor. BadRequest será enviado quando nenhum outro erro for aplicável ou se o erro exato for desconhecido ou não tiver seu próprio código de erro.
+
+~~~C#
+     if(id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+~~~
+
+<h5>HttpNotFound()</h5>
+Equivalente ao status HTTP 404. NotFound indica que o recurso solicitado não existe no servidor.
+
 ### :link: Links Úteis
  - https://docs.microsoft.com/pt-br/aspnet/core/mvc/overview?view=aspnetcore-5.0
  - https://www.casadocodigo.com.br/
