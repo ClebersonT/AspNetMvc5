@@ -53,7 +53,26 @@
     <script src="@Url.Content("~/scripts/DataTables/dataTables.bootstrap.js")"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $('.table').dataTable();
+            $('.table').dataTable({
+                "pagingType": "full_numbers",
+                //coluna e o tipo de ordenação, pois a tabela é ordenada de acordo que a função lê os dados
+                "order": [1, 'asc'],
+                "language": {
+                    "sSearch": "Buscar",
+                    "lengthMenu": "Mostrando _MENU_ registros por página",
+                    "zeroRecords": "Nada encontrado",
+                    "info": "Mostrando página _PAGE_ de _PAGES_",
+                    "infoEmpty": "Nenhum registro disponível",
+                    "infoFiltered": "(filtrado de _MAX_ registros no total)",
+
+                    "oPaginate": {
+                        "sFirst": "Primeira",
+                        "sLast": "Última",
+                        "sNext": "Próxima",
+                        "sPrevious": "Anterior"
+                    }
+                }
+            });
         });
     </script>
 }
