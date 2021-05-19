@@ -1,7 +1,7 @@
 # AspNetMvc5
 Seguindo o tutorial da Casa do Código, utilizando a framework Asp Net Mvc 5 + SQL SERVER para realizarmos um crub básico de categorias e fabricantes
 
-<img alt="HTML" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">&nbsp;<img alt=".Net" src="https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=dot-net&logoColor=white">&nbsp;<img alt="C#" src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white">&nbsp;<img alt="SqlServer" src="https://img.shields.io/badge/Microsoft%20SQL%20Sever-CC2927?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white">&nbsp;
+<img alt="HTML" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">&nbsp;<img alt=".Net" src="https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=dot-net&logoColor=white">&nbsp;<img alt="C#" src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white">&nbsp;<img alt="SqlServer" src="https://img.shields.io/badge/Microsoft%20SQL%20Sever-CC2927?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white">&nbsp;<img alt="Bootstrap" src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white">&nbsp;
 
 ## Algumas Funções Utilizadas no projeto (HtmlHelper)
 
@@ -50,6 +50,9 @@ Equivalente ao status HTTP 400. BadRequest indica que a solicitação não pôde
 
 <h5>HttpNotFound()</h5>
 Equivalente ao status HTTP 404. NotFound indica que o recurso solicitado não existe no servidor.
+
+<hr>
+<img alt="tela" src="https://ik.imagekit.io/cleber/fabricantes_C4jx-6iI8.png">
 
 ### :link: Links Úteis
  - https://docs.microsoft.com/pt-br/aspnet/core/mvc/overview?view=aspnetcore-5.0
