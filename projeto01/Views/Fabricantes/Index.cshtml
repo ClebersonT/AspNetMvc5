@@ -5,7 +5,7 @@
     ViewBag.Title = "Listagem de FABRICANTES";
 }
 <!--Mensagem temporaria - armazenado em um curto periodo de tempo-->
-@if(@TempData["Message"] != null)
+@if (@TempData["Message"] != null)
 {
     <div class="alert alert-success" role="alert">
         @TempData["Message"]
@@ -13,7 +13,7 @@
 }
 
 @*
-    Demais intruções    
+    Demais intruções
 *@
 <div class="panel panel-primary">
     <div class="panel-heading">
@@ -27,7 +27,7 @@
                         @Html.DisplayNameFor(model => model.FabricanteId)
                     </th>
                     <th>
-                        @Html.DisplayNameFor( model => model.Nome)
+                        @Html.DisplayNameFor(model => model.Nome)
                     </th>
                     <th>Ações</th>
                 </tr>
@@ -53,14 +53,14 @@
         </table>
     </div>
     <div class="panel-footer panel-info">
-        @Html.ActionLink("Registrar um novo FABRICANTE", "Create", null, new{ @class ="btn btn-success" })
+        @Html.ActionLink("Registrar um novo FABRICANTE", "Create", null, new { @class = "btn btn-success" })
     </div>
 </div>
 @section styles{
-    <link href="@Url.Content("~/content/DataTables/css/dataTables.bootstrap.css")" rel="stylesheet"/>
-}   
+    <link href="@Url.Content("~/content/DataTables/css/dataTables.bootstrap.css")" rel="stylesheet" />
+}
 @section ScriptPage {
-    <script src=" @Url.Content("~/scripts/DataTables/jquery.dataTables.js")" ></script>
+    <script src=" @Url.Content("~/scripts/DataTables/jquery.dataTables.js")"></script>
     <script src="@Url.Content("~/scripts/DataTables/dataTables.bootstrap.js")"></script>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -84,6 +84,13 @@
                     }
                 }
             });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('li').removeClass("active");
+            $('#liFabricantes').addClass("active");
         });
     </script>
 }

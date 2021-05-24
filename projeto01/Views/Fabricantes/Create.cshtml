@@ -37,7 +37,7 @@
     <div class="panel-footer panel-info">
         <div class="col-md-offset-2 col-md-10">
             <input type="submit" value="Adicionar Fabricante" class="btn btn-danger" />
-            @Html.ActionLink("Retornar para a listagem de Fabricantes", "Index", null, new { @class = "btn btn-warning"})
+            @Html.ActionLink("Retornar para a listagem de Fabricantes", "Index", null, new { @class = "btn btn-warning" })
         </div>
         <br />
         <br />
@@ -46,6 +46,13 @@
 @section ScriptPage{
     <script src="~/Scripts/jquery.validate.min.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
-}
 
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('li').removeClass("active");
+            $('#liFabricantes').addClass("active");
+        });
+    </script>
+}
+}
 
