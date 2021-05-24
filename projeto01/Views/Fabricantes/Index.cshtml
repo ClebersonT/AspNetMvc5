@@ -4,6 +4,17 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "Listagem de FABRICANTES";
 }
+<!--Mensagem temporaria - armazenado em um curto periodo de tempo-->
+@if(@TempData["Message"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["Message"]
+    </div>
+}
+
+@*
+    Demais intruções    
+*@
 <div class="panel panel-primary">
     <div class="panel-heading">
         Relação de FABRICANTES registrados
