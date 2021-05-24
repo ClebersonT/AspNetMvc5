@@ -57,6 +57,9 @@ Equivalente ao status HTTP 404. NotFound indica que o recurso solicitado não ex
 <hr>
 <img alt="Fabricantes Create" src="https://ik.imagekit.io/cleber/fabricantes_6yblZW7DF.png">
 
+<hr>
+<img alt="Fabricantes Delete" src="https://ik.imagekit.io/cleber/fabricantes_SM7dGJF1G.png">
+
 ### :link: Links Úteis
  - https://docs.microsoft.com/pt-br/aspnet/core/mvc/overview?view=aspnetcore-5.0
  - https://www.casadocodigo.com.br/
